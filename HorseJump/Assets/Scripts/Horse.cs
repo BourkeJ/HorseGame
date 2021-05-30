@@ -7,7 +7,7 @@ public class Horse : MonoBehaviour
     [SerializeField] private ConveyorMovement _conveyorMovement = null;
     [SerializeField] private Vector3 _horseJump = Vector3.zero;
 
-    [SerializeField] private Vector3 _conveyorNewSpeed = Vector3.zero;
+    public Vector3 _conveyorNewSpeed = Vector3.zero;
     [SerializeField] private Vector3 _horseNewJump = Vector3.zero;
 
     private Rigidbody _rigidbody = null;

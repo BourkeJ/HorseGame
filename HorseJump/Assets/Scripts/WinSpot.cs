@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class WinSpot : MonoBehaviour
 {
     [SerializeField] private ConveyorMovement _conveyorMovement = null;
+    [SerializeField] private Rigidbody _rigidbody = null;
+    [SerializeField] private Horse _horse = null;
 
     [SerializeField] private GameObject _youWin = null;
     [SerializeField] private string _sceneName = "";
@@ -20,9 +22,11 @@ public class WinSpot : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.tag == "donutBox")
+        if(col.tag == "Horse")
         {
             _conveyorMovement.velocity = Vector3.zero;
+            _rigidbody.velocity = Vector3.zero;
+            _horse._conveyorNewSpeed = Vector3.zero;
             print("dang");
             _youWin.SetActive(true);
             _won = true;
