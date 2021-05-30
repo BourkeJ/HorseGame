@@ -22,7 +22,7 @@ public class Horse : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(_transform.position.y >= 0.4f && _transform.position.y <= 0.5f)
+        if(_transform.position.y >= -1f && _transform.position.y <= -0.7f)
         {
             _rigidbody.velocity += _horseJump;
         }

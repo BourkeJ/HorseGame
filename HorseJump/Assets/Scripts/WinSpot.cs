@@ -8,6 +8,7 @@ public class WinSpot : MonoBehaviour
     [SerializeField] private ConveyorMovement _conveyorMovement = null;
     [SerializeField] private Rigidbody _rigidbody = null;
     [SerializeField] private Horse _horse = null;
+    [SerializeField] private HoldScore _holdScore = null;
 
     [SerializeField] private GameObject _youWin = null;
     [SerializeField] private string _sceneName = "";
@@ -38,6 +39,7 @@ public class WinSpot : MonoBehaviour
         if(_won == true)
         {
             _sceneTimer -= Time.deltaTime;
+            _holdScore.won = true;
             if(_sceneTimer <= 0f)
             {
                 SceneManager.LoadScene(_sceneName);
